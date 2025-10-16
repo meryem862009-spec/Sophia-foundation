@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // ✅ Ship even if TS/ESLint complain in CI
   typescript: {
-    // Allow production builds even if there are TS errors
     ignoreBuildErrors: true,
   },
   eslint: {
-    // Skip ESLint during builds on CI
     ignoreDuringBuilds: true,
   },
 };
